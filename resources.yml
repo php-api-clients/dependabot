@@ -1,0 +1,8 @@
+yaml_location: yaml
+api_settings: ApiClients\Client\Dependabot\ApiSettings
+src:
+    path: src/Resource
+    namespace: ApiClients\Client\Dependabot\Resource
+tests:
+    path: tests/Resource
+    namespace: ApiClients\Tests\Client\Dependabot\Resource
