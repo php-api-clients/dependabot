@@ -1,0 +1,8 @@
+class: Account\Attributes\AutoMergeWorkingHours\Day
+properties:
+  end: string
+  start: string
+  working-day:
+    type: bool
+    annotations:
+      rename: working_day

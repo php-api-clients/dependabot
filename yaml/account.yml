@@ -1,0 +1,7 @@
+class: Account
+properties:
+  id: int
+  attributes:
+    type: Account\Attributes
+    annotations:
+      nested: Account\Attributes

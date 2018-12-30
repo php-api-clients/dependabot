@@ -1,0 +1,30 @@
+class: Account\Attributes\AutoMergeWorkingHours
+properties:
+  monday:
+    type: Account\Attributes\AutoMergeWorkingHours\Day
+    annotations:
+      nested: Account\Attributes\AutoMergeWorkingHours\Day
+  tuesday:
+    type: Account\Attributes\AutoMergeWorkingHours\Day
+    annotations:
+      nested: Account\Attributes\AutoMergeWorkingHours\Day
+  wednesday:
+    type: Account\Attributes\AutoMergeWorkingHours\Day
+    annotations:
+      nested: Account\Attributes\AutoMergeWorkingHours\Day
+  thursday:
+    type: Account\Attributes\AutoMergeWorkingHours\Day
+    annotations:
+      nested: Account\Attributes\AutoMergeWorkingHours\Day
+  friday:
+    type: Account\Attributes\AutoMergeWorkingHours\Day
+    annotations:
+      nested: Account\Attributes\AutoMergeWorkingHours\Day
+  saterday:
+    type: Account\Attributes\AutoMergeWorkingHours\Day
+    annotations:
+      nested: Account\Attributes\AutoMergeWorkingHours\Day
+  sunday:
+    type: Account\Attributes\AutoMergeWorkingHours\Day
+    annotations:
+      nested: Account\Attributes\AutoMergeWorkingHours\Day

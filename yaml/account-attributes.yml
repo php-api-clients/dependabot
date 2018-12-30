@@ -1,0 +1,59 @@
+class: Account\Attributes
+properties:
+  github-id:
+    type: int
+    annotations:
+      rename: github_id
+  github-login:
+    type: string
+    annotations:
+      rename: github_login
+  github-account-type:
+    type: string
+    annotations:
+      rename: github_account_type
+  access-granted-to-all-repos:
+    type: bool
+    annotations:
+      rename: access_granted_to_all_repos
+  current-installation-id:
+    type: int
+    annotations:
+      rename: current_installation_id
+  plan-name:
+    type: string
+    annotations:
+      rename: plan_name
+  plan-number:
+    type: int
+    annotations:
+      rename: plan_number
+  free-trial-end-date:
+    type: string
+    annotations:
+      rename: free_trial_end_date
+  automatically-rebase-prs:
+    type: bool
+    annotations:
+      rename: automatically_rebase_prs
+  update-run-time:
+    type: string
+    annotations:
+      rename: update_run_time
+  create-merge-commits:
+    type: bool
+    annotations:
+      rename: create_merge_commits
+  weekly-update-run-day:
+    type: string
+    annotations:
+      rename: weekly_update_run_day
+  limit-initial-update-runs:
+    type: bool
+    annotations:
+      rename: limit_initial_update_runs
+  automerge-working-hours:
+    type: Attributes\AutoMergeWorkingHours
+    annotations:
+      collection: Attributes\AutoMergeWorkingHours
+      rename: automerge_working_hours
