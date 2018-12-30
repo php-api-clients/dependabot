@@ -1,0 +1,7 @@
+class: Repository\UpdateConfigs
+properties:
+  id: int
+  attributes:
+    type: Repository\UpdateConfigs\Attributes
+    annotations:
+      nested: Repository\UpdateConfigs\Attributes

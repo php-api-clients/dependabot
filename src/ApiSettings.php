@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ApiClients\Client\Dependabot;
 
+use ApiClients\Client\Dependabot\Middleware\RelationsMiddleware;
 use ApiClients\Foundation\Hydrator\Options as HydratorOptions;
 use ApiClients\Foundation\Options as FoundationOptions;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
@@ -30,6 +31,7 @@ final class ApiSettings
                 UserAgentMiddleware::class,
                 JsonDecodeMiddleware::class,
                 JsonEncodeMiddleware::class,
+                RelationsMiddleware::class,
             ],
             TransportOptions::DEFAULT_REQUEST_OPTIONS => [
                 UserAgentMiddleware::class => [

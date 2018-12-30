@@ -1,0 +1,25 @@
+class: Repository\Attributes
+properties:
+  github-id:
+    type: int
+    annotations:
+      rename: github_id
+  name: string
+  installation-state:
+    type: string
+    annotations:
+      rename: installation_state
+  private: bool
+  fork: bool
+  github-url:
+    type: string
+    annotations:
+      rename: github_url
+  primary-language:
+    type: string
+    annotations:
+      rename: primary_language
+  default-branch:
+    type: string
+    annotations:
+      rename: default_branch

@@ -1,0 +1,12 @@
+class: Repository
+properties:
+  id: int
+  attributes:
+    type: Repository\Attributes
+    annotations:
+      nested: Repository\Attributes
+  update-configs:
+    type: Repository\UpdateConfigs
+    annotations:
+      collection: Repository\UpdateConfigs
+      rename: update_configs

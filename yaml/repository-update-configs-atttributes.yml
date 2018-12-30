@@ -1,0 +1,40 @@
+class: Repository\UpdateConfigs\Atttributes
+properties:
+  language: string
+  package-manager:
+    type: string
+    annotations:
+      rename: package_manager
+  update-schedule:
+    type: string
+    annotations:
+      rename: update_schedule
+  directory: string
+  target-branch:
+    type: string
+    annotations:
+      rename: target_branch
+  lockfile-only:
+    type: bool
+    annotations:
+      rename: lockfile_only
+  security-updates-only:
+    type: bool
+    annotations:
+      rename: security_updates_only
+  update-subdependencies:
+    type: bool
+    annotations:
+      rename: update_subdependencies
+  automerge-rule-runtime-deps:
+    type: bool
+    annotations:
+      rename: automerge_rule_runtime_deps
+  automerge-rule-development-deps:
+    type: bool
+    annotations:
+      rename: automerge_rule_development_deps
+  requirements-update-strategy:
+    type: bool
+    annotations:
+      rename: requirements_update_strategy

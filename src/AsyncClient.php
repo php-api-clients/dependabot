@@ -6,6 +6,7 @@ namespace ApiClients\Client\Dependabot;
 
 use ApiClients\Client\Dependabot\CommandBus\Command\AccountsCommand;
 use ApiClients\Client\Dependabot\CommandBus\Command\MethodCommand;
+use ApiClients\Client\Dependabot\Resource\AccountInterface;
 use ApiClients\Foundation\ClientInterface;
 use ApiClients\Foundation\Factory;
 use ApiClients\Foundation\Resource\ResourceInterface;
@@ -13,6 +14,7 @@ use React\EventLoop\LoopInterface;
 use React\Promise\CancellablePromiseInterface;
 use React\Promise\PromiseInterface;
 use Rx\Observable;
+use Rx\React\Promise;
 use function ApiClients\Tools\Rx\unwrapObservableFromPromise;
 
 final class AsyncClient implements AsyncClientInterface
@@ -66,6 +68,15 @@ final class AsyncClient implements AsyncClientInterface
     public function method(string $input): PromiseInterface
     {
         return $this->client->handle(new MethodCommand($input));
+    }
+
+    public function account(int $githubId): PromiseInterface
+    {
+        return Promise::fromObservable(unwrapObservableFromPromise(
+            $this->client->handle(new AccountsCommand())
+        )->filter(function (AccountInterface $account) use ($githubId) {
+            return $account->attributes()->githubId() === $githubId;
+        }));
     }
 
     public function accounts(): Observable
