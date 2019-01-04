@@ -17,4 +17,9 @@ interface RepositoryInterface extends ResourceInterface
      * @return Repository\Attributes
      */
     public function attributes(): Repository\Attributes;
+
+    /**
+     * @return Repository\UpdateConfigs
+     */
+    public function updateConfigs(): array;
 }

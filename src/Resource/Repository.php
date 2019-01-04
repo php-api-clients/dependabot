@@ -33,7 +33,7 @@ abstract class Repository extends AbstractResource implements RepositoryInterfac
     protected $attributes;
 
     /**
-     * @var Repository\UpdateConfigs
+     * @var Repository\UpdateConfigs[]
      */
     protected $update_configs;
 
@@ -53,10 +53,7 @@ abstract class Repository extends AbstractResource implements RepositoryInterfac
         return $this->attributes;
     }
 
-    /**
-     * @return Repository\UpdateConfigs
-     */
-    public function updateConfigs(): Repository\UpdateConfigs
+    public function updateConfigs(): array
     {
         return $this->update_configs;
     }
