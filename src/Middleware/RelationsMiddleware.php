@@ -13,7 +13,7 @@ use React\Promise\CancellablePromiseInterface;
 use function React\Promise\resolve;
 
 /**
- * TODO: Do better then this. This works for the short term be this project needs a proper openapi response handling
+ * TODO: Do better then this. This works for the short term be this project needs a proper openapi response handling.
  */
 final class RelationsMiddleware implements MiddlewareInterface
 {

@@ -17,17 +17,17 @@ unwrapObservableFromPromise($client->account($argv[1])->then(function (Account $
 }))->filter(function (Repository $repository) {
     return $repository->attributes()->installationState() === 'active';
 })->filter(function (Repository $repository) {
-    return in_array('php', array_map(function ($updateConfigs) {
+    return \in_array('php', \array_map(function ($updateConfigs) {
         return $updateConfigs['attributes']['language'];
-    }, $repository->updateConfigs()));
-})->subscribe(function (Repository $repository) use ($argv) : void {
+    }, $repository->updateConfigs()), true);
+})->subscribe(function (Repository $repository) use ($argv): void {
     resource_pretty_print($repository);
 
-    $config = current($repository->updateConfigs());
+    $config = \current($repository->updateConfigs());
     $configId = (int)$config['id'];
     $repository->updateConfig($configId, [
         'requirements-update-strategy' => $argv[2],
-    ])->done(null, function ($e) {
+    ])->done(null, function ($e): void {
         echo (string)$e;
     });
 }, function ($error): void {

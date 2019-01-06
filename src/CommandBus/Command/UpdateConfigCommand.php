@@ -18,7 +18,7 @@ final class UpdateConfigCommand
     private $newConfig;
 
     /**
-     * @param int $configId
+     * @param int   $configId
      * @param array $newConfig
      */
     public function __construct(int $configId, array $newConfig)
